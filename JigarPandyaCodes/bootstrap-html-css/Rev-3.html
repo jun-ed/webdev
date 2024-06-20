@@ -1,0 +1,72 @@
+<!-- 
+    Grid
+    12 equal column
+    100%==>
+
+    2 equal column
+    100/2==>50%
+    12/2 ==> col-6
+
+    media query
+    -----------------------
+    mobile
+    tablet
+    desktops/laptops
+
+    6 column --- in large screen
+    width: 16.66%
+    col-lg-2
+
+    2 columns set  -  in small screen
+
+    width:50%
+    col-6
+ -->
+
+ <meta name="viewport" content="width=device-width">
+
+<div class="container">
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2 col-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+    <div class="col-lg-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, earum, magni dignissimos animi officiis non beatae voluptas nam dolores modi velit esse adipisci harum similique officia illo! Atque, minima architecto!
+    </div>
+</div>
+
+<style>
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-lg-2{
+        width: 16.6666%;
+    }
+
+    @media only screen and (max-width:600px){
+        .container{
+            width: 95%;
+            margin: auto;
+        } 
+        .col-6{
+            width: 50%;
+        }  
+    }
+</style>

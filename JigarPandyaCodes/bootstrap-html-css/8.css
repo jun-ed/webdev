@@ -1,0 +1,16 @@
+.container{
+    border: solid;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* css3 */
+}
+.product{
+    border: solid;
+    width: 25%;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
