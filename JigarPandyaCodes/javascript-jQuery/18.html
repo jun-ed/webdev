@@ -1,0 +1,20 @@
+<input type="text" id="x1" /> <br>
+<input type="text" id="x2" /> <br>
+<button onclick="f1()">Enter</button>
+<p></p>
+
+<script>
+    function f1(){
+        // console.log('called');
+        // console.log(document.getElementById('x1'));
+        var data1 = document.getElementById('x1').value;
+        console.log(data1);
+        var data2 = document.getElementById('x2').value;
+        console.log(data2);
+        // var ans = parseInt(data1) + parseInt(data2);
+        var ans = parseFloat(data1) + parseFloat(data2);
+        console.log(ans);
+        // querySelector() may select any html tag
+        document.querySelector("p").innerHTML =ans;
+    }
+</script>

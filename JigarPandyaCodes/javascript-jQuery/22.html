@@ -1,0 +1,12 @@
+<!-- Regular Expression 
+
+    (ABCDE)(1234)(K)
+    () as a group
+    []{5} -- range {}
+-->
+<script>
+    var regExp = /^([a-zA-Z]{5})([0-9]{4})([a-zA-Z])$/;
+    var pincode = 'abcde1234h';
+    var ans = regExp.test(pincode)
+    console.log(ans); //true or false
+</script>

@@ -1,0 +1,23 @@
+<!-- For Loop -->
+<script>
+    var amount = 150000;
+    var roi=7.1/100;
+    var openingBalance = 0;
+
+    for(let i=1 ; i<=15 ; i++)
+    {
+        var interest = (openingBalance+amount)*roi;
+        // console.log(Math);
+        interest = Math.round(interest);
+        var closingBalance = openingBalance + amount + interest;
+
+        console.log(i , openingBalance,interest,closingBalance);
+
+        document.write(`
+            <li> ${i} , ${openingBalance} ,${interest} ,${closingBalance} </li>
+        `);
+
+        openingBalance = closingBalance;
+    }
+    console.log(i);
+</script>

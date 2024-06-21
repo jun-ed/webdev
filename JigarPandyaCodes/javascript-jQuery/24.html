@@ -1,0 +1,20 @@
+<!-- Regular Expression 
+    DOMAIN NAME
+
+    (google).(com)
+    
+    99acres.com
+    ask-to-resolve.com
+    in.com
+    (google).(co)(.in)?
+    [a-zA-Z]{2,}
+    [a-zA-Z]+ ==>  [a-zA-Z]{1,}
+
+    (google).(co)(.in)?
+-->
+<script>
+    var regExp = /^([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?$/;
+    var pincode = 'google.com';
+    var ans = regExp.test(pincode)
+    console.log(ans); //true or false
+</script>

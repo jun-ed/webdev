@@ -1,0 +1,25 @@
+<button id="b1">Hide</button> 
+<button id="b2">Show</button> 
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt et blanditiis alias, at rem perspiciatis eaque ipsa a in esse magnam, vel officiis beatae, quas obcaecati voluptatibus quia amet!
+</p> 
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            // alert();
+            // $("p").hide();
+            // $("p").slideUp(3000);
+            $("p").fadeOut(3000);
+        });
+        $("#b2").click(function(){
+            $("p").show();
+            // $("p").slideDown(3000);
+            // $("p").fadeIn(3000);
+        });
+    });
+</script>
+<!-- jquery effects -->

@@ -1,0 +1,12 @@
+<input type="checkbox" id="x1" />
+<input type="password" id="x2" />
+<script>
+    // (condition)?(true related statements):(false related statements)
+    document.getElementById('x1').onchange = function(){
+        // console.log(this);
+        // console.log(this.checked);
+        var ans = (this.checked)?"text":"password";
+        // console.log(ans);
+        document.getElementById('x2').type = ans;
+    }
+</script> 

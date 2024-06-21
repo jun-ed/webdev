@@ -1,0 +1,22 @@
+<script>
+    // function definition
+    function homeLoanCalc(P,N,R) // parameters
+    {
+        console.log('Function Called');
+        console.log(P , N , R);
+        N = N*12;
+        R = R/12/100;
+        //P x R x (1+R)^N / [(1+R)^N-1]
+        var emi = P * R * (1+R)**N / ( (1+R)**N - 1 );
+        console.log(emi);
+        console.log(Math.round(emi));
+    }
+
+    // function call
+    homeLoanCalc(2500000,30,8.75); // arguments
+
+    // function dob(value){
+    //     // Age is : 24
+    // }
+    // dob("20/")
+</script>

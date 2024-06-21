@@ -1,0 +1,15 @@
+<!-- Regular Expression 
+    PASSWORD
+    He@#m1
+    ()()()(). each group
+    ()()()().{4,8} each group
+    ?= current Char onward
+    ?=. current Char onward each char
+    ?=.* current Char onward each char any where in the string
+-->
+<script>
+    var regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#\-]).{4,8}$/;
+    var pincode = 'H@mtm1';
+    var ans = regExp.test(pincode)
+    console.log(ans); //true or false
+</script>

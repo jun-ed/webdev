@@ -1,0 +1,16 @@
+<!-- Regular Expression 
+
+    // delimiter
+    ^ first character
+    $ last character
+    [] - 1 character
+    [a-z]
+    [a-zA-Z]
+    [0-9]
+-->
+<script>
+     var regExp = /^[1-9][0-9][0-9][0-9][0-9][0-9]$/;
+     var pincode = 400010;
+     var ans = regExp.test(pincode)
+     console.log(ans); //true or false
+</script>

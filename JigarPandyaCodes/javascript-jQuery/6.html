@@ -1,0 +1,25 @@
+<script>
+    var product = {
+        name:"Shirt",
+        price:1000,
+        size:['XL','XXL','M']
+    }
+    console.log(product);
+
+    document.write(`
+        <div>
+            <h1>${product.price}</h1>
+            <p>${product.name}</p>
+            <p>${product.size.join(",")}</p>   
+            <button>Add To Cart</button> 
+        </div> 
+    `);
+</script>
+<style>
+    div{
+        border:1px solid black;
+        padding:10px;
+       width: 300px;
+       text-align: center;
+    }
+</style>

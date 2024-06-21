@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="x1">Hello</h1>
+        <h2>World</h2>
+        <button onclick="f1()">Enter</button>
+        <script>
+            function f1()
+            {
+                // console.log('test')
+                console.log(typeof document);
+                console.log(document);
+                console.log(document.getElementById('x1'));
+
+                document.getElementById('x1').style.background = '#888';
+
+                document.getElementById('x1').innerText = ' <i>Hey JS</i>';
+                document.getElementById('x1').innerHTML = ' <i>Hey JS</i>';
+                document.getElementById('x1').remove();
+            }
+        </script>
+    </body>
+</html>

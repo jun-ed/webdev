@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<input id="x1" type="text" placeholder="Email" /> <br>
+<input id="x2" type="password" placeholder="Password" /> <br>
+<button>Login</button>
+<p></p>
+
+<script>
+    $(document).ready(function(){
+
+        var regExpPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#\-]).{4,8}$/;
+
+        var regExpEmail = /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])@(([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)$/;
+
+        $("button").click(function(){
+            var email = $("#x1").val();
+            var pass = $("#x2").val();
+            // console.log(email,pass);
+            if(!regExpEmail.test(email)){
+                $("p").html("Invalid Email");
+            }
+            else if(!regExpPass.test(pass)){
+                $("p").html("Invalid Password");
+            }
+            else{
+                $("p").html("Success");
+            }
+        });
+    });
+</script>
