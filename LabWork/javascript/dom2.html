@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text"> <br>
+    <input id="text" type="text"> <br>
+    <p></p>
+    <button onclick="btnFun()">Submit</button>
+</body>
+
+<script>
+
+    function btnFun(){
+        var name = document.getElementById("name").value;
+        var text = document.getElementById("text").value;
+        var ans = parseInt(name) + parseInt(text);
+        document.querySelector("button").style.backgroundColor = "red";
+        document.querySelector("p").innerHTML = ans;
+        
+    }
+</script>
+
+</html>

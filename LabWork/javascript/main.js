@@ -146,4 +146,20 @@ document.write(`
     var total_age = date_of_birth("20/02/2000");
 
     console.log(total_age);
+
+
+    // anonymous function
+    // function without name is called anonymous function
+    let sum = function(a, b){
+        return a + b;
+    }
+    console.log(sum(10, 20));
+    console.log(typeof sum);
     
+
+    // arrow function
+    let sub = (a, b) => {
+        return a - b;
+    }
+    console.log(sub(10, 20));
+    console.log(typeof sub);

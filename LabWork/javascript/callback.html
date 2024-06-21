@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="btnFunction()">Enter</button>
+
+    <h1 onmouseenter="enterFunc()" onmouseleave="leaveFunc()">Events</h1>
+
+    <textarea name="" id="" onkeyup="keyUp() "></textarea>
+
+    <input type="text" name="" id=""
+    onfocus="focusFun()" onblur="blurFun()">
+
+</body>
+
+<script>
+
+    function focusFun(){
+        console.log("focus called");
+    }
+
+    function blurFun(){
+        console.log("blur called");
+    }
+
+    function keyUp(){
+        console.log(Math.random());
+    }
+
+    function enterFunc(){
+        document.write(`
+        <div>Mouse Enter Event</div>
+        `)
+    }
+
+    function leaveFunc(){
+        document.writeln(`
+        <div>Mouse Leave Event</div>
+        `)
+    }
+
+
+    // callbacks in javascript
+    setInterval( () => {
+        console.log(Math.random());
+    }, 100000);
+
+    setTimeout(function(){
+        console.log("Hello");
+    }, 3000);
+
+
+    let arr = [10,20,30,40,50];
+    console.log(arr);
+    arr.forEach((val, i) => {
+        console.log(i, val);
+    })
+
+    // connecting HTML and JavaScript through events
+    function btnFunction(){
+        console.log("Hello");
+        document.write(`
+            <div>OnCLick Event function called</div>
+            `);
+    }
+    document.querySelector("button").addEventListener("click", () => {
+        console.log("Hello");
+        document.write(`
+            <div>Querry Selector event called</div>
+            `);
+    });
+
+</script>
+
+</html>

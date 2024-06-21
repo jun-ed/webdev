@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal-Box</title>
+</head>
+<body>
+    <button>Open Box</button>
+    <div class="modalbox"></div>
+</body>
+
+<style>
+    .modalbox {
+        width: 800px;
+        height: 500px;
+        background-color: grey;
+        border-radius: 40px;
+        position: fixed;
+        top: 50px;
+        left: 25%;
+    }
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.modalbox').hide();
+        $("button").click(function() {
+            $('.modalbox').fadeIn(3000);
+        })
+        $('.modalbox').click(function() {
+            $('.modalbox').fadeOut(3000);
+        })
+    })
+</script>
+
+</html>

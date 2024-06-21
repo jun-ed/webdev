@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+</head>
+<body>
+
+    <!-- 
+        // delimeter or boundry
+        ^ first charecter
+        $ last charecter
+        [0-9]
+        [a-z]
+        [A-Z]
+        [a-zA-Z]
+        () as a group
+        []{5} range ==> []*5
+        ()? => optional group
+        []+ => at least one or more charecter from this square bracket
+        .\ => to get as normal charecter will use \, dont assume regular expression predefinde value of dot(.)
+        ()()()(). => dot is special character, each group must get satisfied/ have some values
+                     each grroup must relaease at least 1 charecter 
+
+        ?=   current charecter onword
+        ?=.  current char onword check each charecter
+        ?=.* current char onword check each charecter anywhere in the string
+    -->
+    
+</body>
+
+<script>
+
+    // Regular Expression for Pincode
+    var regExp = /^[1-9][0-9][0-9][0-9][0-9][0-9]$/;
+    var pincode = 400050;
+    var ans = regExp.test(pincode);
+    console.log(ans);
+
+    // Regular Expression for Pancard
+    // ABCD1234K
+    var panRegExp = /^([a-zA-Z]{5})([0-9]{4})([a-zA-Z])&/
+    var pancard = "IFCKJ0923J";
+    var panAns = panRegExp.test(pancard);
+    console.log(panAns);
+
+    // Regular Expression in Email
+    var emailRegExp = /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])@(([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z0-9]{2,})([\.a-zA-Z]{2,})?)$/;
+    var email = "jun1ed09@gmail.com";
+    var emailAns = emailRegExp.test(email);
+    console.log(emailAns);
+
+    // regular expression for domain name
+    var domainRegExp = /^([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z0-9]{2,})([\.a-zA-Z]{2,})?$/
+    // var domainRegExp = /^[a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9]$/;
+    var domain = "www.99google.co.in";
+    var domainAns = domainRegExp.test(domain);
+    console.log(domainAns);
+
+    // regular expression for password
+    // He@#m1
+    var passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#!\$%\-]).{4,8}$/;
+    // var passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+    var password = "Jung@1";
+    var passwordAns = passwordRegExp.test(password);
+    console.log(passwordAns);
+
+</script>
+
+
+</html>

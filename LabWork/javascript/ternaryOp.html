@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary OP</title>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="check">
+    <input type="password" name="" id="pass">
+    
+</body>
+
+<script>
+    // ternary operator to check the password
+    document.getElementById("check").onchange = function(){
+        console.log(this);
+        console.log(this.checked);
+        var ans = (this.checked) ? "text" : "password";
+        console.log(ans);
+        document.getElementById("pass").type = ans;
+    }
+
+</script>
+
+</html>

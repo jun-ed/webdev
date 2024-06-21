@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-LogIn</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="email" placeholder="Eneter Email"> <br>
+    <input type="password" name="" id="pass" placeholder="password">  <br>
+    <button>LogIn</button>
+    <p></p>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    // Regular Expression in Email
+    var emailRegExp = /^([a-zA-Z0-9]([a-zA-Z0-9_\.]+)?[a-zA-Z0-9])@(([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z0-9]{2,})([\.a-zA-Z]{2,})?)$/;
+
+    // password regular expression
+    var passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#!\$%\-]).{4,8}$/;
+
+    $(document).ready(function() {
+        $('button').click(function(){
+            var email = $('#email').val();
+            var pass = $('#pass').val();
+            console.log(email, pass);
+
+            if(!emailRegExp.test(email)){
+                $('p').html("Invalid Email");
+            }
+            else if(!passwordRegExp.test(pass)){
+                $('p').html("Invalid Password");
+            }
+            else{
+                $('p').html("Valid Email and Password");
+            }
+
+        });
+
+    })
+</script>
+
+</html>

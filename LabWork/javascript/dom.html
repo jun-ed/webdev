@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="x1">Hello</h1>
+        <h2 id="x2">World</h2>
+        <button onclick="btnFunction()">Enter</button>
+    </div>
+</body>
+
+<script>
+    console.log(document);
+
+    function btnFunction() {
+        document.getElementById("x1").style.color = "red";
+        document.getElementById("x1").style.fontSize = "50px";
+        document.getElementById("x1").style.fontWeight = "bold";
+        document.getElementById("x1").innerText = `<i>Heyss </i>`;
+        document.getElementById("x1").innerHTML = `<i>Heyss 2543</i>`;
+        document.getElementById("x2").remove();
+    }
+
+    console.log(document.getElementById("x1"))
+
+    
+
+</script>
+
+</html>

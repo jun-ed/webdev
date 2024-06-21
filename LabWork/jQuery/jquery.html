@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<body>
+
+    <button id="btn1">Hide</button> <br>
+    <button id="btn2">Show</button>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi illo et voluptas optio consectetur esse deserunt ut! Nam quod, nihil sapiente unde voluptates neque, voluptatem obcaecati mollitia perferendis dignissimos dolor?
+    </p>
+    <button id="enter">Enter</button>
+
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    // to see jQuery Functions
+    // console.log($);
+    // console.log(jQuery);
+
+    $(document).ready(function(){
+        $('#enter').click(function(){
+            // alert("Button is Clicked!!");
+            // $('p').hide();
+            // confirm("Deleted");
+            // prompt("Enter thge name")
+            $('p').css('border','solid, red');
+            $('p').width(200);
+            $('p').height(200);
+        });
+    });
+
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            // $('p').hide();
+            // $('p').slideUp(3000);
+            $('p').fadeOut(3000);
+            
+            // $('p').fadeIn(3000);
+        })
+        $('#btn2').click(function(){
+            // $('p').show();
+            // $('p').fadeIn(3000);
+            $('p').slideDown(3000);
+        })
+    });
+</script>
+
+</html>

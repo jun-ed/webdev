@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Accordian</title>
+</head>
+<body>
+
+    <h1>JQuery Header 1 <span></span> </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ducimus nostrum rem ipsam debitis deleniti minus sunt rerum reiciendis quisquam, nulla dignissimos. Blanditiis necessitatibus doloribus nesciunt dolore? Et, exercitationem consectetur!
+
+    </p>
+
+    <h1>JQuery Header 2</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ducimus nostrum rem ipsam debitis deleniti minus sunt rerum reiciendis quisquam, nulla dignissimos. Blanditiis necessitatibus doloribus nesciunt dolore? Et, exercitationem consectetur!
+
+    </p>
+
+
+    <h1>JQuery Header 3</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid ducimus nostrum rem ipsam debitis deleniti minus sunt rerum reiciendis quisquam, nulla dignissimos. Blanditiis necessitatibus doloribus nesciunt dolore? Et, exercitationem consectetur!
+
+    </p>
+    
+</body>
+
+<style>
+    h1, p{
+        margin: 0px;
+        border: solid;
+        padding: 20px;
+        width: 400px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+      $('p').hide();
+        //   jQuery Filter
+      $('p:first').show();
+      $('h1').click(function(){
+        $('p').slideUp(1000);
+        // next() => jQuery traverse/navigation functiom
+        $(this).next().slideDown(1000);
+      });
+
+    });
+
+   
+</script>
+
+</html>
