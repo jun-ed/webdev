@@ -1,0 +1,55 @@
+<!--  
+    ajax - asynchronous javascript & XML
+    its a technique
+    it uses html,css & javascript
+    it is used to send and receive data from a server without reloading the page
+    ajax uses XMLHttpRequest(XHR) Object From Browser Env
+    intension is to access data from server side lang or any apis without page refresh
+    you may use json or XML for data transfer
+-->
+
+<button>Get Data</button>
+<ul></ul>
+<script>
+    //event Listener
+    document.querySelector('button').addEventListener('click' , function(){
+        document.querySelector('ul').innerHTML='';
+        // alert();
+        var xmlhttp = new XMLHttpRequest();
+        // console.log(xmlhttp);
+        // console.log(typeof xmlhttp);
+
+        console.log(xmlhttp.readyState);
+        // 0 - No Request Initialized By User
+
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState,xmlhttp.status);
+            // 3 - request is in progress
+             // 4 -- cycle completed
+            console.log(xmlhttp.responseText);
+            console.log(typeof xmlhttp.responseText);
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                // convert json into javascript object
+                var result = JSON.parse(xmlhttp.responseText);
+                console.log(result);
+
+                result.forEach((values)=>{
+                    console.log(values , values.name);
+
+                    var liTag = document.createElement('li');
+                    liTag.innerHTML = values.name;
+                    document.querySelector('ul').append(liTag);
+                });
+            }
+        }
+
+        //http://localhost:5005/user_api
+        xmlhttp.open("GET","http://localhost:5005/user_api");
+        //1 - request has been setup
+
+        xmlhttp.send();
+        //2 - request has been sent to server
+
+    });
+</script>

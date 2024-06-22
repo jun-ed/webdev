@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aJaX</title>
+</head>
+<body>
+    
+    <button>Get Data</button>
+    <ul></ul>
+
+</body>
+
+<script>
+    document.querySelector('button').addEventListener
+    ('click', function(){
+        // alert("Button clicked");
+        var xmlhttp = new XMLHttpRequest();
+        // console.log(xmlhttp);
+        // console.log(typeof xmlhttp);
+        // console.log(xmlhttp.readyState);
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState, xmlhttp.status);
+            console.log(xmlhttp.responseText);
+            console.log(typeof xmlhttp.responseText);
+
+            // converting json into 
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                var result = JSON.parse(xmlhttp.responseText);
+                console.log(result);
+
+                result.forEach(val => {
+                    console.log(val, val.name);
+
+                    var liTag = document.createElement('li');
+                    liTag.innerHTML = val.name;
+                    document.querySelector('ul').append(liTag);
+                });
+                            }
+        }
+        xmlhttp.open('GET', "http://localhost:3000/alluser");
+        xmlhttp.send();
+        
+    })
+</script>
+</html>

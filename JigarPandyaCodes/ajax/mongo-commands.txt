@@ -1,0 +1,36 @@
+C:\Users\hp\AppData\Local\Programs\mongosh\
+
+C:\Program Files\MongoDB\Server\5.0\bin
+
+http://localhost:27017
+
+show dbs
+use metcdac
+db
+db.createCollection('users');
+show collections
+
+db.users.insert({"name":"user1","age":20});
+db.users.insert({"name":"user2","age":21});
+db.users.insert({"name":"user3","age":22});
+db.users.insert({"name":"user4","age":23});
+
+db.users.find();
+db.users.find().pretty();
+db.users.find({name:'user1'});
+db.users.find({age:{$lt:23}});
+db.users.find({age:{$gt:23}});
+db.users.find({age:{$lte:23}});
+db.users.find({age:{$gte:23}});
+db.users.find({age:{$eq:23}});
+db.users.find({age:{$ne:23}});
+db.users.find({age:{$in:[23,21,90]}});
+db.users.find({$or:[{name:'user1'},{age:23}]});
+db.users.find({$and:[{name:'user1'},{age:23}]});
+
+db.users.update({name:'user1'},{$set:{age:19}});
+db.users.find({name:'user1'});
+
+db.users.remove({name:'user1'});
+db.users.remove({});
+db.users.find();

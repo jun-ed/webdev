@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Post</title>
+</head>
+<body>
+    <h1>Add Record</h1>
+    <input type="text" id="id" placeholder="id"><br>
+    <input type="text" id="name" placeholder="name"><br>
+    <input type="text" id="pass" placeholder="password"><br>
+    <input type="text" id="mail" placeholder="email">
+    <button>Add</button>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('button').click(function(){
+            var record = {
+                id: $('#id').val(),
+                name: $('#name').val(),
+                email: $('#mail').val(),
+                pass: $('#pass').val(),
+                
+            }
+            console.log(record);
+            record = JSON.stringify(record);
+            console.log(record);
+            $.ajax({
+                type : 'post',
+                data : record,
+                url : 'http://localhost:3000/alluser',
+                contentType : 'application/json',
+                success : function(response){
+                    console.log(response);
+                    // window.location.bref='ajax.html';
+                }
+            })
+        })
+    })
+</script>
+
+</html>

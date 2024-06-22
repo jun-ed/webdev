@@ -1,0 +1,79 @@
+C:\Users\dac16\AppData\Local\Programs\mongosh\
+
+
+show dbs
+use cdac
+db
+db.createCollection('users');
+show collections
+
+db.user.insert({"name":"Juned", "age":25});
+db.user.insert({"name":"Aatif", "age":25});
+db.user.insert({"name":"Sana", "age":21});
+db.user.insert({"name":"Kashish", "age":22});
+db.user.insert({"name":"Muskan", "age":23});
+
+
+db.user.find();
+
+db.user.find().pretty();
+
+//where clause
+db.user.find({name:'Juned'});
+
+//operators
+//lessthan=> $lt
+db.user.find({age:{$lt:23}});
+
+//lessthan equal to=> $lte
+db.user.find({age:{$lte:23}});
+
+//graterthan $gt
+db.user.find({age:{$gt:23}});
+
+//greaterthan equal to $gte
+db.user.find({age:{$gte:23}});
+
+db.user.find({age:{$eq:23}});
+
+db.user.find({age:{$ne:23}});
+
+//inoperator
+db.user.find({age:{$in:[20,21,22]}});
+
+
+//logical operator
+db.user.find({$or:[{name:'Juned'},{age:22}]});
+
+db.user.find({$and:[{name:'Juned'},{age:25}]});
+
+
+//update
+db.user.update({name:'Juned'},{$set:{age:19}});
+db.user.find({name:'Juned'});
+
+//remove
+db.user.remove({name:'Juned'});
+db.user.remove({});
+db.user.find({});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
