@@ -14,7 +14,7 @@ async function main() {
         to : "junedshaikh782@gmail.com",
         subject : "Sending Email using Node.js",
         text : "That was easy!",
-        html : "<b>That was easy!</b>",
+        html : "<b>That was easy! send from juned</b>",
     });
 
     console.log("Message sent: %s", info.messageId);
