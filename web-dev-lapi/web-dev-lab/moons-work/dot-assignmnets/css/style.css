@@ -1,0 +1,46 @@
+.card {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(219, 203, 203);
+    margin: 100px;
+    margin-left: 500px;
+    border: 5px solid rgb(231, 231, 231);
+}
+
+img {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.para-h {
+    color: black;
+    font-size: 30px;
+    font: bold;
+    font-weight: 1000;
+}
+
+.money {
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.actual-amt {
+    color: blue;
+    padding: 5px;
+}
+
+.cancel {
+    text-decoration: line-through;
+    
+}
+
+.off-btn {
+    background-color: rgb(41, 148, 41);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.line {
+    width: 80%;
+    border: 1px solid rgb(167, 159, 159);
+}
