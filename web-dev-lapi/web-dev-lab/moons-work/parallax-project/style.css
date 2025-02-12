@@ -19,8 +19,11 @@
     
 }
 
-.img-background {
-
+.img-background, .img-foreground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .img-foreground {
