@@ -9,12 +9,13 @@
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-
+    
 }
 
 .container {
     position: relative;
-    display: flex;  
+    display: flex; 
+    flex-direction: row; 
 }
 
 .img-background, .img-foreground {
@@ -26,4 +27,9 @@
 
 .img-foreground {
     
+}
+
+.sport {
+    position: absolute;
+    width: 100%;
 }
